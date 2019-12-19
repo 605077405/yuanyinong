@@ -1,0 +1,48 @@
+
+<view class='title'>
+  <label style='margin-left:30rpx'>当前在线人数：
+    <label style="color:#099594">{{count}}</label>
+  </label>
+</view>
+<scroll-view   bindscrolltoupper="scroll" scroll-into-view="{{toView}}" class='chatPage'scroll-y='{{true}}' 
+style='height:{{scrollHeight}}px' scroll-top="{{scrollTop}}">
+  <block wx:for-items="{{msgList}}" wx:key='id' wx:for-index="index" >
+   <view id="{{item.showId?'view'+item.showId:''}}" class="{{item.showId?'prevId':''}}">
+    <view id="msg{{index}}" class='container-left' wx:if="{{item.username!=username}}">
+      <image class='cover' src='{{item.imgUrl}}'></image>
+          <view >
+           <view style="margin-left:10px;color:#C0C0C0">{{item.username}}</view>
+           <view class='bubble'>
+            <view class='caret-left'></view>
+            <view class='bubble1'>
+            <label style='margin-left:10px;margin-right:30rpx;'>{{item.msg}}</label></view>
+         </view>
+          </view>
+    </view>
+    <view id="msg{{index}}" class='container-right' wx:else>
+      <view class='bubble'>
+        <view class='bubble2'>
+        <label style='margin-left:10px;margin-right:10px;'>
+        {{item.msg}}
+        </label>
+        </view>
+        <view class='caret-right'></view>
+      </view>
+         <image class='cover' src='{{imgUrl}}'></image>
+    </view>
+     </view>
+  </block>
+   
+</scroll-view>
+ 
+
+
+
+
+ 
+<!--输入框组件-->
+<view class='messageInfo'> 
+  <image src='../../img/jianpan.png' class='icon' ></image>
+ <input class='msg-input'  bindinput='inputTyping' bindconfirm="sendMsgWz"   value="{{msg}}"></input>
+  <image src='../../img/fasong.png' class='icon'  bindtap='sendMsgWz'></image>
+</view>

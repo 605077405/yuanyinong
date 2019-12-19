@@ -1,0 +1,26 @@
+<view class='list'>
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" previous-margin="{{'140rpx'}}" next-margin="{{'140rpx'}}" bindchange="swiperChange">
+    <block wx:for="{{shopList}}" wx:key="{{index}}">
+      <swiper-item>
+        <image bindtap="goView" data-id="{{item.id}}"  src="{{item.imgurl}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="border-box share-situation">
+    <view class="border-box share-situation__tag" bindtap="shareX">最新动态</view>
+    <view class="border-box share-situation__user">
+   
+      <view class="border-box share-situation__txt {{item.activeClass == true ? 'active': ''}}" 
+      wx:for="{{shareSituationList}}"> {{item.username}}发布：{{item.name}}  {{item.money}}元/{{item.flagName}}</view>
+    </view>
+     <span class="marker"></span>
+  </view>
+
+
+<view class="paddingCss">
+
+<cover-image  style="width:200px; height:180px; border-radius:10%; overflow:hidden;float:left"  src="../../img/yecheng.png"></cover-image>
+<view class="fontCss">邺城，古代著名都城。遗址范围包括今河北临漳县西（邺北城、邺南城遗址等）、河南安阳市北郊（曹操高陵等）一带。遗址主体位于河北省临漳县境内，县城西南20公里处的漳河岸畔，南距安阳市18公里，北距邯郸市40余公里。始筑于春秋齐桓公时。东汉末年，曹操击败袁绍，占据邺城，营建王都。邺城先后为曹魏、后赵、冉魏、前燕、东魏、北齐六朝都城，居黄河流域政治、经济、军事、文化中心长达四个世纪之久。1957年考古工作者对邺城遗址进行了首次勘察，1979年，邺城遗址被公布为临漳县文物保护单位。1988年，被国务院公布为全国重点文物保护单位。2012年1月，邺城考古队在临漳县北吴庄发现佛造像埋藏坑，挖掘出土2895件东魏、北齐石造像及残件，是目前所知建国以来出土最多的佛教造像埋葬坑。邺城遗址也是研究古代都城、建安文学、北朝文化的大型遗址。</view>
+</view>

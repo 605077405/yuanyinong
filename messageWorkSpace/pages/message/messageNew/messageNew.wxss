@@ -1,0 +1,145 @@
+
+
+page {
+  background-color: #eee;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.top {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 15rpx;
+  box-shadow: 0 5rp 5rp #e9e9e9;
+  margin-top: 2em;
+}
+
+.one_list {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.one_list2 {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: 450rpx;
+}
+.x {
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  background-color: #999;
+  color: #fff;
+  text-align: center;
+  line-height: 34rpx;
+  font-size: 24rpx;
+  float: right;
+}
+
+.x_line {
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+}
+
+.change{
+  display: flex;
+  align-items: center
+}
+
+
+.btn {
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: #fff;
+  margin-top: 40rpx;
+  background: linear-gradient(to right, rgb(97, 153, 121), #01B468);
+  border-radius: 15rpx;
+  box-shadow: 0 5rpx 5rpx #01B468;
+}
+.title{
+  text-align: justify;
+}
+.add-image, .up-pic image {
+  margin-top: 2%;
+  margin-left: 2%;
+  width: 150rpx;
+  height: 150rpx;
+  color: #ddd;
+  font-size: 144rpx;
+  line-height: 95%;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 10rpx;
+}
+
+.picture_list {
+  padding: 20rpx;
+  margin-left: 11%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.picture_item {
+  margin: 10px;
+  margin-left: 0;
+  position: relative;
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.picture_item .del {
+  position: absolute;
+  top: -11rpx;
+  right: -11rpx;
+  color: #fff;
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  z-index: 2;
+  line-height: 35rpx;
+  text-align: center;
+  background-color: #f00;
+}
+
+.upload_progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  border-radius: 8rpx;
+  background-color: #000;
+  color: #fff;
+  width: 160rpx;
+  height: 160rpx;
+  text-align: center;
+  line-height: 160rpx;
+  font-size: 12px;
+}
+
+.picture_item image {
+  width: 160rpx;
+  height: 160rpx;
+}

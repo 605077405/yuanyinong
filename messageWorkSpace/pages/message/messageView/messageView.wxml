@@ -1,0 +1,23 @@
+
+<swiper style="height:280px"  autoplay="{{autoplay}}" indicator-dots="{{indicatorDots}}">
+ <block wx:for-items="{{imgs}}" wx:key='id' wx:for-index="index" >
+<swiper-item>
+ <image data-currenturl='{{item}}' data-previewurl='{{imgs}}'  bindtap='previewImg' style="width:95%;margin: 20rpx;" src='{{item}}'  ></image>
+</swiper-item>
+</block>
+</swiper>
+<scroll-view >
+  <view class='meta'>
+    <text class='title'>{{shopMsg.name}}</text>
+    <text class='info'>联系人：{{shopMsg.username}}</text>
+    <text class='info'  bindtap="callto">电话：{{shopMsg.phone}}</text>
+    <text class='info'>地址：{{shopMsg.address}}</text>
+    <text class='info'>发布时间：{{shopMsg.creatat}}</text>
+    <text class='info'>价格：{{shopMsg.money}}元/{{flagName}}</text>
+    <text class='info'wx:if="{{shopMsg.flag==4}}">价格备注：{{shopMsg.flagdesc}}</text>
+    <text class='info'>管送：{{shopMsg.pipe==1?'管送':'不管送'}}</text>
+      <text class='info'>备注：{{shopMsg.xydesc}}</text>
+  <view bindtap="hositoryPush" data-openId="{{shopMsg.openId}}" style="float:rigth; margin-top: 2em;text-decoration:underline;color:#01B468 ">历史发布消息>>></view>
+  </view>
+
+</scroll-view>

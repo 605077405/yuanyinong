@@ -1,0 +1,119 @@
+.con-teacher{
+  display: flex;
+  flex-direction:row;
+  width:90%;
+  height:320rpx;
+  border: 2rpx solid #eeeeee;
+  padding:10rpx 10rpx;
+  margin:10rpx auto;
+}
+.con-trimg{
+  width:260rpx;
+  height:290rpx;
+  margin:15rpx 20rpx; 
+}
+.con-info{
+  margin:15rpx 20rpx;
+  overflow: hidden; 
+  font-size: 32rpx;
+ 
+  color:#01B468;
+}
+.coin-info{
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+.footer{
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+.coin-name{
+
+  color: #01B468;
+}
+.round-click{
+    height: 120rpx;
+    width: 120rpx;
+    background-color: #01B468;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 100rpx;
+    right: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+.round-click navigator{
+    font-size: 32rpx;
+    max-width: 80rpx;
+    color: #fff;
+    text-align: center;
+}
+.content{
+  margin-top: 2em
+}
+.rport-box{
+  margin: 20rpx 0;
+  background:rgba(255,255,255,1);
+  height: 128rpx;
+   padding: 20rpx 30rpx 0 30rpx;
+}
+.noMessage{
+  text-align: center;
+  font-size:30rpx;
+  margin-top:200rpx;
+}
+.noMessage image{
+  width:143rpx;
+  height:99rpx;
+  margin-top:100rpx
+}
+ 
+.sousuo {
+  margin-left: 15rpx;
+  width: 15%;
+  line-height: 190%;
+  text-align: center;
+  border: 1px solid #01B468;
+  border-radius: 10rpx;
+  background-color: #01B468;
+  color: #fff;
+}
+.page_row{
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row
+}
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  left:25rpx;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.phcolor{
+    color: #01B468;
+}
+.search{
+  width: 80%;
+}
+.search_arr {
+  border: 1px solid #01B468;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+.search_arr input{
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+}
+.bc_text {
+  line-height: 68rpx;
+  height: 68rpx;
+  margin-top: 34rpx;
+}
+ 

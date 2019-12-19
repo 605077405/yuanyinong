@@ -1,0 +1,45 @@
+.meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1000rpx;
+  padding: 50rpx 40rpx;
+}
+.poster {
+  width: 80%;
+  height: 80%;
+  margin: 20rpx;
+}
+.title {
+  font-size: 42rpx;
+  color: #01B468;
+}
+.info {
+  font-size: 36rpx;
+  color: #01B468;
+  margin-top: 20rpx;
+  width: 80%;
+}
+.summary {
+  width: 80%;
+  margin: 30rpx auto;
+}
+.label {
+  display: block;
+}
+.content {
+  color: #01B468;
+  font-size: 20rpx;
+  padding: 10rpx;
+}
+.btn {
+  width: 30%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: #fff;
+  margin-top: 40rpx;
+  background: linear-gradient(to right, rgb(97, 153, 121), #01B468);
+  border-radius: 15rpx;
+  box-shadow: 0 5rpx 5rpx #01B468;
+}

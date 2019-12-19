@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#01B468",
+  "navigationBarTitleText": "易农",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}

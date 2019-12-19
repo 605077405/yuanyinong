@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/homePage/homePage",
+    "pages/publicMsg/publicMsg",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/message/message/message",
+    "pages/message/myMessage/myMessage",
+    "pages/message/messageView/messageView",
+    "pages/message/messageNew/messageNew",
+    "pages/message/messageEidt/messageEidt",
+    "pages/message/messageHistory/messageHistory",
+    "pages/message/messageHistory/HistoryView/HistoryView"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#01B468",
+    "list": [
+        {
+          "pagePath": "pages/homePage/homePage",
+          "text": "首页",
+          "iconPath": "img/index.png",
+          "selectedIconPath": "img/indexSelect.png"
+        },
+          {
+            "pagePath": "pages/message/message/message",
+            "text": "农产消息",
+            "iconPath": "img/report.png",
+            "selectedIconPath": "img/reportSelect.png"
+          },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "img/user.png",
+        "selectedIconPath": "img/userSelect.png"
+      }
+    ]
+  }
+}

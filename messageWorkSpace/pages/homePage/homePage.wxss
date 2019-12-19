@@ -1,0 +1,89 @@
+swiper{
+  width: 100%;
+  height: 460rpx;
+}
+swiper-item{
+  padding-top: 50rpx;
+}
+image{
+  width: 400rpx;
+  height: 300rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -188rpx;
+  border-radius: 10px
+}
+image.active{
+  transform: scale(1.14);
+  transition:all .2s ease-in 0s;
+}
+.border-box {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.share-situation {
+  display: flex;
+  height: 80rpx;
+  margin: 30rpx;
+  padding: 17rpx 30rpx;
+  border-radius: 12rpx;
+  box-shadow: 0rpx 7rpx 8rpx 0rpx rgba(146, 146, 146, 0.16);
+  background: #fff;
+}
+
+.share-situation__user {
+  height: 46rpx;
+  overflow: hidden;
+}
+
+.share-situation__txt {
+  display: flex;
+  flex: 1;
+  height: 46rpx;
+  padding: 10rpx 10rpx;
+  color: #01B468;
+  font-size: 26rpx;
+  line-height: 1;
+}
+
+.share-situation__txt.active {
+  margin-top: -46rpx;
+  transition: all 1s;
+}
+
+.share-situation__tag {
+  display: flex;
+  height: 46rpx;
+  margin-right: 30rpx;
+  padding: 10rpx 10rpx;
+  color: #01B468;
+  font-size: 26rpx;
+  line-height: 1;
+  background: rgba(255, 102, 0, 0.1);
+  border-radius: 23rpx;
+  width: 180rpx;
+}
+.marker {      
+ width: 8px;      
+ height: 6px;      
+ border: 1px solid red;      
+ border-radius: 100px;      
+ background-color:red;
+ opacity: 10;
+ margin-top: 4rpx;
+     }  
+.fontCss{
+ text-indent:2em;
+ font-size: 26rpx;
+  line-height: 2;
+  border-radius: 23rpx;
+  color: #01B468;
+ padding: 10rpx 10rpx;
+}
+.paddingCss{
+
+padding: 10rpx 10rpx;
+padding-left: 10px;
+padding-right: 10px;
+
+}

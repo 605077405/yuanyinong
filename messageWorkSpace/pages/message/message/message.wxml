@@ -1,0 +1,30 @@
+  <view class='page_row' bindtap="suo">
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" color="#01B468" size='20' type='search'></icon>
+        <input placeholder-class="phcolor" bindconfirm="search"   bindinput="searchValue"  placeholder="请输入名称" value="{{searchValue}}"/>
+      </view>
+    </view>
+    <view class='sousuo' bindtap="search">搜索</view>
+  </view>
+<view class="content">
+  <block wx:for-items="{{shopMsgList}}" wx:key='id' wx:for-index="index" >
+  <navigator url="/pages/teacherlist/teacherlist" hover-class="navigator-hover" class="con-teacher">
+    <view class="con-tr">
+      <image src="{{item.img}}" class="con-trimg"></image>
+    </view>
+    <view class="con-info" bindtap="selectById" data-id="{{item.id}}">
+      <view class="coin-name">名称：{{item.name}}</view>
+      <view class="coin-info">备注：{{item.xydesc}}</view>
+      <view class="footer">发布时间:{{item.pushtime}}</view>
+    </view>
+  </navigator>
+ </block>
+   <view  wx:if="{{shopMsgList.length==0}}"  class="noMessage">
+      <image src="https://hjy-video.s3.cn-north-1.jdcloud-oss.com/brand/personal/noMessage.png"></image>
+      <view>暂无消息</view>
+    </view>
+</view>
+  <view class="round-click" bindtap="pushMessage">
+       <navigator url='/pages/addimages/addimages' >发布农产</navigator >
+    </view>

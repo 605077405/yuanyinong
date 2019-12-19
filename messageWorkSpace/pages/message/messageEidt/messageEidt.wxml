@@ -1,0 +1,150 @@
+<!--pages/A-centrality/A-mySetting/A-password/A-password.wxml-->
+<view class='container'>
+  <form>
+  
+    <view class='top'>
+      <view class='one_list'>
+        <view class='change'>
+          <view class='title'><span style="color:red">*</span>农产名称：</view>
+          <view>
+            <input maxlength='20'value="{{name}}"  bindinput="inputName" ></input>
+          </view>
+        </view>
+        <view bindtap="clearName" class='x'>✖</view>
+      </view>
+      <view class='x_line'></view>
+      <view class='one_list2'>
+        <view class="title"><span style="color:red">*</span>单位：</view>
+          <picker bindchange="onPickerChange" value="{{flag}}" range="{{picker}}">
+            <view style="">
+              {{flag?picker[flag]:'请选择'}}
+            </view>
+          </picker>
+      </view>
+      <view class='x_line'></view>
+  <view class='one_list'wx:if="{{flag==4}}">
+        <view class='change'>
+          <view class='title'><span style="color:red">*</span>单位备注:</view>
+          <view>
+            <input maxlength='20'  value="{{flagdesc}}"  bindinput="inputFlagdesc"></input>
+          </view>
+        </view>
+        <view  bindtap="clearFlagdesc" class='x'>✖</view>
+      </view>
+      <view class='x_line'></view>
+      <view class='one_list'>
+        <view class='change'>
+          <view class='title'><span style="color:red">*</span>金额(元)：</view>
+          <view>
+            <input  type="digit" value="{{money}}" maxlength='20'  bindinput="inputMoney"></input>
+          </view>
+        </view>
+        <view class='x'>✖</view>
+      </view>
+      <view class='x_line'></view>
+      <view class='one_list'>
+        <view class='change'>
+          <view class='title'><span style="color:red">*</span>联系人：</view>
+          <view>
+            <input value="{{username}}" maxlength='20'  bindinput="inputUserName"></input>
+          </view>
+        </view>
+        <view class='x'>✖</view>
+      </view>
+      <view class='x_line'></view>
+      <view class='one_list'>
+        <view class='change'>
+          <view class='title'><span style="color:red">*</span>联系电话：</view>
+          <view>
+            <input type="number" value="{{phone}}"  maxlength='20'  bindinput="inputPhone"></input>
+          </view>
+        </view>
+        <view class='x'>✖</view>
+      </view>
+ <view class='x_line'></view>
+  <view class='one_list'>
+        <view class='change'>
+          <view class='title'><span style="color:red">*</span>地址：</view>
+          <view>
+            <input  value="{{address}}"  maxlength='20' bindinput="inputAddress"></input>
+          </view>
+        </view>
+        <view class='x'>✖</view>
+      </view>
+ <view class='x_line'></view>
+  <view class='one_list'>
+        <view class='change'>
+          <view class='title'>是否管送：</view>
+    <switch checked="{{pipeChecked}}" bindchange="pipeChange"/>
+        </view>
+      </view>
+      <view class='x_line'></view>
+  <view class='one_list'>
+        <view class='change'>
+          <view class='title'>是否发布：</view>
+    <switch checked="{{pushflagChecked}}" bindchange="pushflagChange"/>
+        </view>
+      </view>
+      <view class='x_line'></view>
+       <view class='one_list'>
+        <view class='change'>
+          <view class='title'>备注：</view>
+          <view>
+            <input value="{{xydesc}}"  maxlength='20'  bindinput="inputXydesc"></input>
+          </view>
+        </view>
+        <view class='x'>✖</view>
+      </view>
+      <view class='x_line'></view>
+
+
+
+<view class='x_line'></view>
+       <view class='one_list'>
+        <view class='change'>
+          <view class='title'>图片上传</view>
+        </view>
+      </view>
+
+
+<!-- 
+ <block wx:for-items="{{imgs}}" wx:key='id' wx:for-index="index" >
+    <image src="{{item}}" style="width:7em;height:7em"></image>
+ </block>
+       <image bindtap='chooseImageTap' src="../../../img/tupian.png" style="width:7em;height:7em;margin-left: 10%;"></image>
+      <view class='x_line'></view>
+ -->
+
+
+
+<view class="picture_list">
+
+    <view wx:for="{{upload_picture_list}}" class="picture_item" wx:key="{{index}}">
+      <image wx:if="{{item.upload_percent < 100}}" src="{{item.path}}" mode="aspectFill"></image>
+      <image wx:if="{{item.upload_percent == 100}}" src="{{item.path_server}}" mode="aspectFill"></image>
+      <view class="upload_progress" wx:if="{{item.upload_percent < 100}}" data-index="{{index}}" bindtap="previewImg">{{item.upload_percent}}%</view>
+      <text class='del' bindtap='deleteImg' data-src='{{image}}' style='display:{{isDel}}' data-index="{{index}}">×</text>
+    </view>
+
+    <view class='picture_item'>
+      <view class="add-image" bindtap='uploadpic'>
+        <text>+</text>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+
+    </view>
+    <view class='btn' bindtap="onSubtmit">确定</view>
+
+  </form>
+
+
+
+    
+</view>

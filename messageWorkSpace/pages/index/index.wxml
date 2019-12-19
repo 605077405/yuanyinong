@@ -1,0 +1,55 @@
+<!--pages/my/my.wxml-->
+<form reportSubmit bindsubmit="submitFormId">
+  <view class="header">
+    <view class="user" hoverClass="none">
+      <view class="user_box">
+        <view catchtap="previewImage" class="logo">
+          <image src="{{imgUrl}}"></image>
+          <view class="cu-tag badge {{male==1?'icon-male bg-blue':'icon-female bg-pink'}}"></view>
+        </view>
+        <block wx:if="{{flag ==1}}">
+          <view class="user_info">
+            <view class="user_name">
+              <text>{{username}}</text>
+            </view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="user_info">
+            <view class="user_name">
+              <text>{{nickName}}</text>
+            </view>
+            <view class="vip_expires" bindtap='bindGetUserInfo'>
+              <span style="color:blue;">请登录</span>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+   
+  </view>
+  <!-- 功能列表 -->
+  <view class="nav">
+    <view bindtap="openPage" class="item" data-url="../../../img/fasong.png" formType="submit" hoverClass="none">
+      <view bindtap="goPush" class='wallet'>
+        <text class='icon-favor icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>我的发布</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
+    <view   bindtap="callto" class="item" data-url="/pages/about/about" formType="submit" hoverClass="none">
+      <view class='wallet'>
+        <text class='icon-info icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>联系我们</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
+ 
+  </view>
+</form>
